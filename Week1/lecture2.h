@@ -7,4 +7,10 @@
 
 void simplifyFraction(int* numerator, int* denominator);
 
+void runLecture2Ex3();
+
+void runLecture2Ex4();
+
+bool isPalindrome(char string[]);
+
 #endif //HUISWERK_LECTURE2_H
