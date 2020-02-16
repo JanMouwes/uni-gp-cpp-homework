@@ -1,22 +1,27 @@
 #include <iostream>
 #include "Week1/wordguesser.h"
+#include "Week1/lecture2.h"
 #include "Week2/Stack/Stack.h"
 
 using namespace std;
 
+void runLecture2Ex3() {
+    char array2d[][16] {
+            {"Jan"},
+            {"Ossama"},
+            {"Martijn"},
+            {"Mart"},
+            {"Sybren"},
+    };
+
+    for (auto & i : array2d) {
+        cout << i << endl;
+    }
+}
+
 int main()
 {
-    // call to foo-function:
-    Stack stack ;
-
-    stack.push(2);
-    stack.push(3);
-    stack.push(8);
-    stack.push(9);
-
-    cout << stack.size() << endl;
-
-    stack.print();
+    runLecture2Ex3();
 
     return 0;
 }
