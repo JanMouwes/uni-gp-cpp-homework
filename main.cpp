@@ -12,5 +12,9 @@ int main()
     runLecture2Ex3();
     runLecture2Ex4();
 
+    string filename = "test-file.txt";
+
+    printFile(&filename);
+
     return 0;
 }

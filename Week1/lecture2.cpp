@@ -4,6 +4,7 @@
 
 #include "lecture1.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -60,4 +61,25 @@ void runLecture2Ex4() {
 
     cout << isPalindrome(annaArray) << " should be a palindrome" << endl;
     cout << isPalindrome(verevArray) << " should be a palindrome" << endl;
+}
+
+void printFile(const string* fileName) {
+    ifstream inputFile;
+    inputFile.open(*fileName);
+
+    // Borrowed from: http://www.fredosaurus.com/notes-cpp/io/readtextfile.html
+    if (!inputFile) {
+        cerr << "Unable to open file " << *fileName << endl;
+        exit(1);   // call system to stop
+    }
+
+    char buffer;
+
+    //  By default, whitespaces are skipped when reading files.
+    //  This disables that. Functionally identical to: inputFile.unsetf(ios_base::skipws)
+    inputFile >> std::noskipws;
+
+    while (inputFile >> buffer) {
+        cout << buffer;
+    }
 }
