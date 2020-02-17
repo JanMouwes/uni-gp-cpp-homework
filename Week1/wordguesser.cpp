@@ -35,9 +35,10 @@ bool contains(char word[], char searchChar) {
     return false;
 }
 
-int fillCurrentKnownWord(const char *word, char *guessedChars, char outputArray[]) {
+string fillCurrentKnownWord(const char *word, char *guessedChars) {
     int wordLength = strlen(word);
     int missingChars = 0;
+    char outputArray[wordLength];
 
     for (int i = 0; i < wordLength; ++i) {
         char currentWordChar = word[i];
@@ -50,7 +51,7 @@ int fillCurrentKnownWord(const char *word, char *guessedChars, char outputArray[
         }
     }
 
-    return missingChars;
+    return outputArray;
 }
 
 void runGuesser(const int maxGuesses, const char word[]) {
@@ -59,9 +60,9 @@ void runGuesser(const int maxGuesses, const char word[]) {
 
     char guessedChars[maxGuesses];
     do {
-        char currentKnownWord[strlen(word)];
-        int missingChars = fillCurrentKnownWord(word, guessedChars, currentKnownWord);
-        wordGuessed = missingChars == 0;
+        string currentKnownWord = fillCurrentKnownWord(word, guessedChars);
+
+        wordGuessed = currentKnownWord.find('.') != string::npos;
 
         if (wordGuessed) {
             cout << "Congratulations! You guessed: " << word << endl;
