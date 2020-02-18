@@ -9,19 +9,19 @@
 
 using namespace std;
 
-void simplifyFraction(int* numerator, int* denominator);
+void simplify_fraction(int* numerator, int* denominator);
 
-void runLecture2Ex3();
+void run_lecture2_ex3();
 
-void runLecture2Ex4();
+void run_lecture2_ex4();
 
-void runLecture2Ex7n8();
+void run_lecture2_ex7n8();
 
-void runLecture2Ex9();
+void run_lecture2_ex9();
 
-bool isPalindrome(char string[]);
+bool is_palindrome(char *cstring);
 
-void printFile(const string* fileName);
+void print_file(const string* fileName);
 
 struct PlayerState {
     char name[20]{};

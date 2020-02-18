@@ -10,7 +10,7 @@
 using namespace std;
 
 // Impure function, simplifies fractions
-void simplifyFraction(int* numerator, int* denominator) {
+void simplify_fraction(int* numerator, int* denominator) {
     int divisor = calcGCD(*numerator, *denominator);
 
     *numerator = *numerator/divisor;
@@ -18,7 +18,7 @@ void simplifyFraction(int* numerator, int* denominator) {
 }
 
 
-bool isPalindrome(char cstring[]) {
+bool is_palindrome(char *cstring) {
     int indexA = 0;
     int indexB = strlen(cstring);
     --indexB;
@@ -36,7 +36,7 @@ bool isPalindrome(char cstring[]) {
 }
 
 
-void runLecture2Ex3() {
+void run_lecture2_ex3() {
     char array2d[][16] {
             {"Jan"},
             {"Ossama"},
@@ -50,21 +50,21 @@ void runLecture2Ex3() {
     }
 }
 
-void runLecture2Ex4() {
+void run_lecture2_ex4() {
     char thingArray[] { "thing" };
     char thingsArray[] { "things" };
 
     char annaArray[] { "anna" };
     char verevArray[] { "verev" };
 
-    cout << isPalindrome(thingArray) << " should not be a palindrome" << endl;
-    cout << isPalindrome(thingsArray) << " should not be a palindrome" << endl;
+    cout << is_palindrome(thingArray) << " should not be a palindrome" << endl;
+    cout << is_palindrome(thingsArray) << " should not be a palindrome" << endl;
 
-    cout << isPalindrome(annaArray) << " should be a palindrome" << endl;
-    cout << isPalindrome(verevArray) << " should be a palindrome" << endl;
+    cout << is_palindrome(annaArray) << " should be a palindrome" << endl;
+    cout << is_palindrome(verevArray) << " should be a palindrome" << endl;
 }
 
-void runLecture2Ex7n8() {
+void run_lecture2_ex7n8() {
     PlayerState playerStates[3];
 
     strcpy(playerStates[0].name,"player 1");
@@ -97,7 +97,7 @@ void runLecture2Ex7n8() {
     output.close();
 }
 
-void runLecture2Ex9() {
+void run_lecture2_ex9() {
     ifstream input;
     input.open("game.dat", ios::binary);
 
@@ -118,7 +118,7 @@ void runLecture2Ex9() {
     output.close();
 }
 
-void printFile(const string* fileName) {
+void print_file(const string* fileName) {
     ifstream inputFile;
     inputFile.open(*fileName);
 

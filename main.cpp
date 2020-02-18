@@ -2,6 +2,7 @@
 #include "Week1/wordguesser.h"
 #include "Week1/lecture2.h"
 #include "Week2/Stack/Stack.h"
+#include "Week2/Lecture3/lecture3.h"
 
 using namespace std;
 
@@ -9,14 +10,17 @@ using namespace std;
 
 int main()
 {
-    runLecture2Ex3();
-    runLecture2Ex4();
-    runLecture2Ex7n8();
-    runLecture2Ex9();
+    run_lecture2_ex3();
+    run_lecture2_ex4();
+    run_lecture2_ex7n8();
+    run_lecture2_ex9();
+
+    run_lecture3_ex1();
+    run_lecture3_ex2();
 
     string filename = "test-file.txt";
 
-    printFile(&filename);
+    print_file(&filename);
 
     return 0;
 }
