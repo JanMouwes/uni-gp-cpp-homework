@@ -9,6 +9,8 @@ void run_lecture3_ex1();
 
 void run_lecture3_ex2();
 
+void run_lecture3_ex3();
+
 void create_array_of_length(int* p, int n);
 
 #endif //HUISWERK_LECTURE3_H

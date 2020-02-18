@@ -18,6 +18,10 @@ int main()
     run_lecture3_ex1();
     run_lecture3_ex2();
 
+    cout << endl;
+
+    run_lecture3_ex3();
+
     string filename = "test-file.txt";
 
     print_file(&filename);
