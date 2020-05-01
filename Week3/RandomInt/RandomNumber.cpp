@@ -58,3 +58,22 @@ void test_random_array(int tries, int array_length) {
     }
 
 }
+
+
+static int previous_random_number = 0;
+
+static int random_integer() {
+    const int a = 59;
+    const int c = 3;
+    const int m = 4409;
+
+    previous_random_number = (a * previous_random_number + c) % m;
+
+    return previous_random_number;
+}
+
+static int random_integer_in_range(int min, int max) {
+    int range = max - min + 1;
+
+    return min + random_integer() % range;
+}
