@@ -8,6 +8,7 @@
 #include "Week3/RandomInt/RandomNumber.h"
 #include "Week5/my_string.h"
 #include "Week3/BinarySearchTree/BinarySearchTree.h"
+#include "Week4/lecture6.h"
 
 using namespace std;
 
@@ -58,9 +59,12 @@ int main()
 //
 //    tree.traverse();
 
-    for (int i = 0; i < 1000; ++i) {
-        std::cout << random_integer_in_range(0, 8) << ' ';
-    }
+//    for (int i = 0; i < 1000; ++i) {
+//        std::cout << random_integer_in_range(0, 8) << ' ';
+//    }
+
+    run_lecture6_ex1();
+    run_lecture6_ex2();
 
     return 0;
 }
