@@ -9,6 +9,7 @@
 #include "Week5/my_string.h"
 #include "Week3/BinarySearchTree/BinarySearchTree.h"
 #include "Week4/lecture6.h"
+#include "practice/Heap/BinaryHeap.cpp"
 
 using namespace std;
 
@@ -63,8 +64,23 @@ int main()
 //        std::cout << random_integer_in_range(0, 8) << ' ';
 //    }
 
-    run_lecture6_ex1();
-    run_lecture6_ex2();
+//    run_lecture6_ex1();
+//    run_lecture6_ex2();
+
+    BinaryHeap<int> heap;
+
+    heap.enqueue(5);
+    heap.enqueue(4);
+    heap.enqueue(7);
+    heap.enqueue(6);
+    heap.enqueue(3);
+    heap.enqueue(8);
+    heap.enqueue(9);
+
+    while (heap.get_size() > 0) {
+//        heap.dequeue();
+        std::cout << heap.dequeue() << std::endl;
+    }
 
     return 0;
 }
